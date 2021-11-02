@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    // cache la deuxième partie de la page qui est le tirage lui-même
-    $("#tiragePret").addClass("d-none");
-
     // initialisation du tableau vide servant au tirage au sort
     var tableauDeBase = [];
 
@@ -10,7 +7,6 @@ $(document).ready(function () {
         var elementTirage = $("#elementTirage").val();
         tableauDeBase.push(elementTirage);
         $(".tableauDeBase").html(tableauDeBase.join(" "));
-
         clearForm();
     });
     
@@ -19,6 +15,7 @@ $(document).ready(function () {
         event.preventDefault();
         $("#preparationTirage").addClass("d-none");
         $("#tiragePret").removeClass("d-none");
+        $("#tiragePret").addClass("d-flex");
     })
 
     // fonction qui permet de vider le champ de saisie
