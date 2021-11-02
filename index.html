@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil tirage au sort</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body class="d-flex h-100 text-center text-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="preparationTirage">
+      <h1 class="my-4">Bienvenue au tirage au sort</h1>
+      <p class="lead my-4">Entrez les éléments du tirage:</p>
+      <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-2">
+              <input type="text" name="elementTirage" id="elementTirage">
+          </div>
+          <div class="col-md-5"></div>
+      </div>
+      <p class="lead my-5">
+          <button class="btn btn-sm btn-secondary fw-bold border-dark bg-dark text-white" id="addElement">Ajouter</button>
+      </p>
+      <h5 class="my-4 tableauDeBase" id="tableauDeBase"></h5>
+      <p class="lead my-5">
+          <button class="btn btn-lg btn-secondary fw-bold border-dark bg-dark text-white" id="goTirage">C'est parti!</button>
+      </p>
+      
+  </div>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="tiragePret">
+      <main class="px-3">
+        <h1 class="my-4">Tirage au sort</h1>
+        <!-- contenant du tableau original à afficher -->
+        <h5 class="my-4 tableauDeBase" id="tableauInitial"></h5>
+        <p class="lead my-5">
+          <button class="btn btn-lg btn-secondary fw-bold border-dark bg-dark text-white" id="lancer">Lancer</button>
+        </p>
+        <!-- contenant du compte à rebours et du résultat -->
+        <h2 class="my-5 text-danger" id="resultat"></h2>
+      </main>
+      <div class="mt-auto text-dark">
+        <!-- contenant des éléments déjà tirées au sort -->
+          <div class="lead" id="elementsPicked"></div>
+      </div>
+      <p class="lead my-5">
+        <button class="btn btn-sm btn-secondary fw-bold border-dark bg-secondary text-white" id="restart">On prend les mêmes et on recommence</button>
+      </p>
+      <p class="lead my-5">
+        <a href="index.html" class="btn btn-sm fw-bold border-dark alert-primary text-dark" id="nouveauTirage">Nouveau tirage</a>
+    </p>
+  </div>
+</body>
+</html>
